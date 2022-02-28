@@ -11,7 +11,9 @@ function index(req, res) {
 }
 
 function newFlight(req, res) {
-  res.render('flights/new')
+  res.render('flights/new', {
+    title: 'Add a New Flight',
+  })
 }
 
 function create(req, res) {
@@ -31,9 +33,29 @@ function show(req, res) {
   })
 }
 
+function createTicket(req, res) {
+  Flight.findById(req.params.id, function(err, flight) {
+    flight.tickets.push(req.body)
+    flight.save(function(err) {
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
+}
+
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+  Flight.findByIdAndUpdate(req.params.id, req.body, function(err, flight) {
+    res.redirect(`/flights/${flight._id}`)
+  })
+}
+
 export {
   index,
   newFlight as new,
   create, 
-  show
+  show, 
+  createTicket,
+  update,
 }

@@ -15,6 +15,13 @@ router.post('/', flightsCtrl.create)
 // GET localhost:3000/:id
 router.get('/:id', flightsCtrl.show)
 
+// POST localhost:3000/flights/:id/tickets
+router.post('/:id/tickets', flightsCtrl.createTicket)
+
+
+router.put('/:id', flightsCtrl.update)
+
+
 export {
   router
 }
