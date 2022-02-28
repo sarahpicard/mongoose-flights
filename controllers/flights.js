@@ -5,6 +5,7 @@ function index(req, res) {
     res.render('flights/index', {
       flights: flights,
       error: error,
+      title: 'All Flights'
     })
   })
 }
@@ -21,8 +22,18 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Flight.findById(req.params.id, function(err, flight) {
+    res.render('flights/show', {
+      title: 'Flight Detail',
+      flight, 
+    })
+  })
+}
+
 export {
   index,
   newFlight as new,
-  create
+  create, 
+  show
 }
