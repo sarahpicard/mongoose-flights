@@ -1,0 +1,62 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<%- include('../partials/nav') %>
+
+
+<main>
+  <h1><%= title %></h1>
+  <p>Please first ensure that the desired meal is not in the list:
+    <select>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }) %>
+    </select>
+  </p>
+  <form action="/meals" id="add-meal" method="POST">
+    <label for="meal-input">Meal:</label>
+    <input type="text" name="name" id="meal-input">
+    <button type="submit">Add Meal</button>
+  </form>
+</main>
+<!-- <main>
+  //<h1><%= title %></h1>
+  <p>Please first ensure that the meal is not in the list below.</p>
+  <form action="/meals" id="add-meal-form" method="POST">
+    <label for="meal-input">Meal:</label>
+    <select name="name" id="meal-select">
+      <option value="Steak">Steak</option>
+      <option value="Lobster">Lobster</option>
+      <option value="Chicken Kiev">Chicken Kiev</option>
+      <option value="Lasagna">Lasagna</option>
+      <option value="Cheeseburger">Cheeseburger</option>
+      <option value="Vegetarian">Vegetarian</option>
+    </select>
+    <button type="submit">Add Meal</button>
+  </form>
+  //<% if (meals.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Meals</th>
+        </tr>
+      </thead>
+      <tbody>
+       // <% meals.forEach(function(meal) { %>
+          <tr>
+         //   <td><%= meals.name %></td>
+          </tr>
+        //<% }) %>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+      </tbody>
+    </table>
+  //<% } else { %>
+    <h3>No Meals Yet</h3>
+  //<% } %>
+</main> -->
+
+<%- include('../partials/footer') %>
+
+
+
