@@ -1,7 +1,10 @@
 </head>
 <body>
-  <nav>
-    <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add a New Flight</a>
-    <a href="/meals/new" <%- title === 'Add Meal' ? 'class="active"' : '' %>>Add Meal</a>
-    <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>See All Flights</a>
+  <nav class="navbar fixed-top bg-dark">
+    <a class="navbar-brand text-white" href="#">
+      <i class="fa-solid fa-plane"></i>
+    </a>
+    <a class="text-white" id="nav-text" href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add a New Flight</a>
+    <a class="text-white" id="nav-text" href="/meals/new" <%- title === 'Add Meal' ? 'class="active"' : '' %>>Add Meal</a>
+    <a class="text-white" id="nav-text" href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>See All Flights</a>
   </nav>

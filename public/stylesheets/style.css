@@ -1,11 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #FAF9F3;
+  background-color: #fdfcfa;
+  margin-top: 60px;
 }
 
 h1 {
-  color: #485B6E;
+  color: navy;
 }
 
 a {
@@ -16,9 +17,9 @@ a {
 }
 
 nav {
-  background-color: #EFEAD8;
-  padding: 15px;
+  padding: 100px;
   margin: 0;
+  height: 75px;
 }
 
 #add-flight {
@@ -27,4 +28,8 @@ nav {
   border: 1px solid #485B6E;
   height: 25px;
   width: 85px;
+}
+
+#nav-text {
+  font-size: 20px;
 }
