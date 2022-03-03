@@ -12,10 +12,10 @@
       <% }) %>
     </select>
   </p>
-  <form action="/meals" id="add-meal" method="POST">
-    <label for="meal-input">Meal:</label>
-    <input type="text" name="name" id="meal-input">
-    <button type="submit">Add Meal</button>
+  <form class="form-group" action="/meals" id="add-meal" method="POST">
+    <label for="meal-input" id="meal-label">Meal:</label>
+    <input class="form-control" type="text" name="name" id="meal-input">
+    <button type="submit" class="btn btn-dark" id="new-meal-button">Add Meal</button>
   </form>
 </main>
 <!-- <main>

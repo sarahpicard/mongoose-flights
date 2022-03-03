@@ -33,3 +33,45 @@ nav {
 #nav-text {
   font-size: 20px;
 }
+
+#new-meal-button {
+  margin-top: 10px;
+}
+
+#tickets-h1 {
+  margin-top: 40px;
+}
+
+#new-flight-button {
+  margin-top: 10px;
+}
+
+#new-flight-h1 {
+  margin-bottom: 30px;
+}
+
+#all-flights-h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+#show-button, #meal-button {
+  margin-top: 15px;
+}
+
+#meal-h3 {
+  margin-top: 30px;
+}
+
+#detail-button, #edit-submit-btn {
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.detail {
+  font-size: 18px;
+}
+
+.homepage-button {
+  margin: 20px;
+}

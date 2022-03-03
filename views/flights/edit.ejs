@@ -4,12 +4,12 @@
 
 <main>
   <h1><%= title %></h1>
-  <form action="/flights/<%= flight._id %>?_method=PUT" id="new-form" method="POST">
+  <form class="form-group" action="/flights/<%= flight._id %>?_method=PUT" id="new-form" method="POST">
     <label>Airline:
-      <input type="text" name="airline" value="<%= flight.airline %>" id="airline-input">
+      <input class="form-control" type="text" name="airline" value="<%= flight.airline %>" id="airline-input">
     </label><br>
     <label>Airport:
-      <select name="airport" value="<%= flight.airport %>" id="airport-input">
+      <select class="form-control" name="airport" value="<%= flight.airport %>" id="airport-input">
         <option value="">--Please choose an option--</option>
         <option value="AUS">AUS</option>
         <option value="DFW">DFW</option>
@@ -19,12 +19,12 @@
       </select>
     </label><br>
     <label>Flight Number:
-      <input type="text" name="flightNo" value="<%= flight.flightNo %>">
+      <input class="form-control" type="text" name="flightNo" value="<%= flight.flightNo %>">
     </label><br>
     <label>Departing Date:
-      <input type="datetime-local" name="departs" value="<%= flight.departs %>">
+      <input class="form-control" type="datetime-local" name="departs" value="<%= flight.departs %>">
     </label><br>
-    <button type="submit">Save Flight</button>
+    <button id="edit-submit-btn" class="btn btn-dark" type="submit">Save Flight</button>
   </form>
 </main>
 
