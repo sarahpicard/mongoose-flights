@@ -72,6 +72,15 @@ function edit(req, res) {
   })
 }
 
+function addMeal(req, res) {
+  Flight.findById(req.params.id, function(err, flight) {
+    flight.meals.push(req.body.mealId)
+    flight.save(function (err) {
+      res.redirect(`/flights/${flight._id}`)
+    })
+  })
+}
+
 export {
   index,
   newFlight as new,
@@ -81,4 +90,5 @@ export {
   update,
   deleteFlight as delete,
   edit,
+  addMeal,
 }
